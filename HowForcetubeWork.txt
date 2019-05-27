@@ -30,15 +30,11 @@ tempo : duration in seconds between two shots(for auto-shots)
 
 -----------------------------------------------------------Connect--------------------------------------------------------------------------
 
-Connect and pair the Forcetube,
-the forcetube himself have to be paired to windows via bluetooth "standard connection" (see eventual specific tuto to pair it to windows)
-The pluging at game start will call once the fonction :
-	FORCETUBEVR void InitAsync();
- ---> so if the forcetube is already paired under windows and powered, then the forcetube will pass from "paired" statu to "connected" statu (can see it in Windows Bluetooth manager).
+The plugin will automatically call the connecting fonction at game start so if the ForceTubeVR is already paired under windows and powered, then the forcetube will pass from "paired" statu to "connected" statu (you can see it in Windows Bluetooth manager).
 at this point, once connected, all is good !
 And,
 if the forcetube isn't powered on game start, or was turned off during the game, or if the connection is lost for any other reason,
-the fonction "InitAsync()" automatically reconnect the fForceTubeVR when Windows detect the loss of connection
+the plugin will automatically reconnect the ForceTubeVR when Windows detect the loss of connection
 as well you didn't paused the dedicated thread by calling SetActiveResearch(false)
 
 
