@@ -30,12 +30,37 @@ tempo : duration in seconds between two shots(for auto-shots)
 
 -----------------------------------------------------------Connect--------------------------------------------------------------------------
 
-The plugin will automatically call the connecting fonction at game start so if the ForceTubeVR is already paired under windows and powered, then the forcetube will pass from "paired" statu to "connected" statu (you can see it in Windows Bluetooth manager).
+Connect and pair the Forcetube,
+
+On Windows :
+
+The forcetube himself have to be paired to windows via bluetooth "standard connection" (see eventual specific tuto to pair it to windows)
+ ---> so if the forcetube is already paired on Windows and powered, then the forcetube will pass from "paired" statu to "connected" statu (can see it in Windows Bluetooth manager) when you open a unity game with this plugin.
 at this point, once connected, all is good !
+
+On Android :
+
+The minimum Android version supported is Android 4.4 "KitKat" so you shouldn't put a lower version for your Unity build setup.
+
+The ForceTubeVR himself have to be paired to android via bluetooth "standard connection".
+
+In standard phone, you can call the OpenBluetoothSettings method to open the android bluetooth manager activity in 2D and all is fine.
+
+So with oculus quest, you basically have two ways to do it :
+- you can use the ForceTubeVR app "BT Manager by ProTubeVR" available in sidequest
+- you can call the OpenBluetoothSettings method to open the android bluetooth manager activity. 
+The problem is this activity don't go back to unity main activity after finish and return to oculus quest home (but you only have to call it once : the pairing remains indefinitely).
+I advice you to don't call this method and to let the protubevr application manage it to don't confuse all players in these settings.
+
+
+ ---> so if the forcetube is already paired on Android and powered, then the ForceTubeVR will pass from "paired" statu to "connected" when you open a unity game with this plugin.
+at this point, once connected, all is good !
+
+
 And,
 if the forcetube isn't powered on game start, or was turned off during the game, or if the connection is lost for any other reason,
-the plugin will automatically reconnect the ForceTubeVR when Windows detect the loss of connection
-as well you didn't paused the dedicated thread by calling SetActiveResearch(false)
+the plugin automatically reconnect the ForceTubeVR when Windows detect the loss of connection
+as well you haven't paused the dedicated thread by calling SetActiveResearch(false).
 
 
 ----------------------------------------------------------Haptic effects------------------------------------------------------------------------
