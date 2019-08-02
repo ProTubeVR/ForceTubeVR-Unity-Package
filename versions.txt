@@ -1,0 +1,1 @@
+This plugin work for Unity 5.0 and later versions.
