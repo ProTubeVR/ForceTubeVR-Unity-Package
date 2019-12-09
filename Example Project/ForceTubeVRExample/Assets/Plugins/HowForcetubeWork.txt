@@ -1,10 +1,18 @@
+Enum :
+
+ForceTubeVRChannel : enum with values { all, rifle, rifleButt, rifleBolt, pistol1, pistol2, other, vest }. 
+
+"all" and "rifle" aren't real channels because "all" redirect to all ForceTubeVR regardless of channels and "rifle" redirect to "rifleButt" and "rifleBolt" chanels.
+
 Fonctions:
 
-	ForceTubeVR void Kick(Byte power);
+	ForceTubeVR void InitAsync(bool pistolsFirst = false);
 
-	ForceTubeVR void Rumble(Byte power, float timeInSeconds);
+	ForceTubeVR void Kick(Byte power, ForceTubeVRChannel target = ForceTubeVRChannel.all);
 
-	ForceTubeVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration);
+	ForceTubeVR void Rumble(Byte power, float timeInSeconds, ForceTubeVRChannel target = ForceTubeVRChannel.all);
+
+	ForceTubeVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel target = ForceTubeVRChannel.all);
 
 	ForceTubeVR void SetActiveResearch(bool active);
 
@@ -24,6 +32,8 @@ timeInSeconds : set rumble duration in second, 0.1 will activate rumble motor fo
 
 rumbleDuration : set rumble duration in second, 0.1 will activate rumble motor for 100ms (side note : under 0.03s, the motors are not activated enouph to give any effect). You can make a rumble without end setting this parameter to 0.
 
+target : channel to send the request. "all" redirect to all ForceTubeVR regardless of channels and "rifle" redirect to "rifleButt" and "rifleBolt" chanels. By default, 
+
 active : True = the plugin will maintain a thread to watch the connection state of ForceTubeVR and reconnect if needed ; False = this thread will be desactivated ; it is set to True by default
 
 tempo : duration in seconds between two shots(for auto-shots)
@@ -34,9 +44,7 @@ Connect and pair the Forcetube,
 
 On Windows :
 
-The forcetube himself have to be paired to windows via bluetooth "standard connection" (see eventual specific tuto to pair it to windows)
- ---> so if the forcetube is already paired on Windows and powered, then the forcetube will pass from "paired" statu to "connected" statu (can see it in Windows Bluetooth manager) when you open a unity game with this plugin.
-at this point, once connected, all is good !
+The forcetube himself have to be paired to windows via bluetooth "standard connection" (see eventual specific tuto to pair it to windows).
 
 On Android :
 
@@ -53,14 +61,20 @@ The problem is this activity don't go back to unity main activity after finish a
 I advice you to don't call this method and to let the protubevr application manage it to don't confuse all players in these settings.
 
 
- ---> so if the forcetube is already paired on Android and powered, then the ForceTubeVR will pass from "paired" statu to "connected" when you open a unity game with this plugin.
-at this point, once connected, all is good !
-
-
 And,
 if the forcetube isn't powered on game start, or was turned off during the game, or if the connection is lost for any other reason,
 the plugin automatically reconnect the ForceTubeVR when Windows detect the loss of connection
 as well you haven't paused the dedicated thread by calling SetActiveResearch(false).
+
+
+
+----------------------------------------------------------InitAsync-----------------------------------------------------------------
+
+If a forcetube is already paired on Windows or Android and powered, then all the forcetubevrs will pass from "paired" status to "connected" status (can see it in Windows Bluetooth manager) just after you call InitAsync().
+With this method, the six first paired forcetubevr detected will be put in the six channels in this order : rifleButt, rifleBolt, pistol1, pistol2, other, vest. It is the best for rifle games.
+If you prefer to set it up as a two pistol game (or any game with one weapon by hand), you should call InitAsync with a boolean "true" as only parameter (like this : InitAsync(true)), 
+and the six first paired forcetubevr detected will be put in the six channels in this order : pistol1, pistol2, rifleButt, rifleBolt, other, vest.
+In the exemple, InitAsync() is called at RuntimeInitialize, so it is when the game with this plugin is launched (from editor or package).
 
 
 ----------------------------------------------------------Haptic effects------------------------------------------------------------------------
@@ -131,6 +145,7 @@ Fonction using the kick :
 	FORCETUBEVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration);
 
 
+
 ----------------------------------------------------------TempoToKickPower-----------------------------------------------------------------
 
 Use it to get the maximum kick power according to the duration ("tempo") between two shots. 
@@ -146,3 +161,4 @@ FORCETUBEVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration);
 
 Use it to get battery value of the connected ForceTubeVR
 You will obtain an unsigned byte, representing the percent of battery, so it's a value between 0 and 100.
+This function is obsolete because it always give the battery level from the first ForceTubeVR used. Now this plugin can manage more than one ForceTubeVR, it can be source of problems.

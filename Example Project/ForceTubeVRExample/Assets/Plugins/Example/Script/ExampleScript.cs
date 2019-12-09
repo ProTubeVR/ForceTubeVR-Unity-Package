@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ExampleScript : MonoBehaviour
 {
-    public Text batteryText;
+    public Text batteryText; 
     private ForceTubeVRInterface forcetubevr;
     private bool auto = false, activeResearch = true, bluetoothLaunched = false;
     private float autoTimer = 0.0f, autoDelay = 0.13f, launchBluetoothTimer = 0.0f, launchBluetoothDelay = 5.0f;
-    
+	private ForceTubeVRChannel target; //The example scene will send requests to this channel. The simplest is "all" (sending to all, ignoring the channel) and the channel rifle send requests to both "rifleButt" and "rifleBolt".
+
+
     void Update()
     {
         if (auto)
@@ -16,7 +19,7 @@ public class ExampleScript : MonoBehaviour
             if (autoTimer >= autoDelay)
             {
                 autoTimer -= autoDelay;
-                ForceTubeVRInterface.Shoot(255, 255, 0.5f);
+				ForceTubeVRInterface.Shoot(255, 255, 0.5f, target);
             }
         }
         if (!bluetoothLaunched)
@@ -34,7 +37,7 @@ public class ExampleScript : MonoBehaviour
     public void Shoot()
     {
         Debug.Log("Shoot");
-        ForceTubeVRInterface.Shoot(255, 255, 0.5f);
+		ForceTubeVRInterface.Shoot(255, 255, 0.5f, target);
     }
 
     public void AutoShoot()
@@ -45,19 +48,23 @@ public class ExampleScript : MonoBehaviour
     public void Kick()
     {
         Debug.Log("Kick");
-        ForceTubeVRInterface.Kick(255);
+		ForceTubeVRInterface.Kick(255, target);
     }
 
     public void Rumble()
     {
-        Debug.Log("Kick");
-        ForceTubeVRInterface.Rumble(255, 0.5f);
+        Debug.Log("Rumble");
+		ForceTubeVRInterface.Rumble(255, 0.5f, target);
     }
+
+	public void SetTargetChannel(int target){
+		this.target = (ForceTubeVRChannel) target;
+	}
 
     public void setActiveResearch()
     {
         activeResearch = !activeResearch;
-        Debug.Log("set active research to " + activeResearch.ToString());
+        Debug.Log("Set active research to " + activeResearch.ToString());
         ForceTubeVRInterface.SetActiveResearch(activeResearch);
     }
 
@@ -70,6 +77,12 @@ public class ExampleScript : MonoBehaviour
     public void BluetoothSettingsPhone()
     {
         Debug.Log("Bluetooth settings");
-        ForceTubeVRInterface.OpenBluetoothSettings(false);
+		ForceTubeVRInterface.OpenBluetoothSettings(false);
     }
+
+	[RuntimeInitializeOnLoadMethod]
+	private static void OnLoadRuntimeMethod() // called at RuntimeInitialize
+	{
+		ForceTubeVRInterface.InitAsync(true);
+	}
 }
