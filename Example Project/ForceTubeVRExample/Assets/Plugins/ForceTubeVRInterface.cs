@@ -111,7 +111,7 @@ public class ForceTubeVRInterface : MonoBehaviour
     ///<summary>
     ///0 = no power, 255 = max power, this function is linear.
     ///</summary>
-	public static void Kick(Byte power, ForceTubeVRChannel target = ForceTubeVRChannel.all)
+	public static void Kick(Byte power, ForceTubeVRChannel target = ForceTubeVRChannel.rifle)
     {
         #if UNITY_ANDROID && !UNITY_EDITOR
             if (ForceTubeVRPlugin != null)
@@ -134,7 +134,7 @@ public class ForceTubeVRInterface : MonoBehaviour
     ///For power : 0 = no power, 255 = max power, if power is 126 or less, only the little motor is activated, this function is linear.
 	///For timeInSeconds : 0.0f seconds is a special command that make the ForceTubeVR never stop the rumble.
     ///</summary>
-	public static void Rumble(Byte power, float duration, ForceTubeVRChannel target = ForceTubeVRChannel.all)
+	public static void Rumble(Byte power, float duration, ForceTubeVRChannel target = ForceTubeVRChannel.rifle)
     {
         #if UNITY_ANDROID && !UNITY_EDITOR
             if (ForceTubeVRPlugin != null)
@@ -157,7 +157,7 @@ public class ForceTubeVRInterface : MonoBehaviour
     ///Combination of kick and rumble methods.
 	///Rumble duration still be in seconds and still don't stop if you set this parameter at 0.0f.
     ///</summary>
-	public static void Shoot(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel target = ForceTubeVRChannel.all)
+	public static void Shoot(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel target = ForceTubeVRChannel.rifle)
     {
         #if UNITY_ANDROID && !UNITY_EDITOR
             if (ForceTubeVRPlugin != null)

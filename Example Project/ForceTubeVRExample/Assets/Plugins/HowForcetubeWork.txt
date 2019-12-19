@@ -8,11 +8,11 @@ Fonctions:
 
 	ForceTubeVR void InitAsync(bool pistolsFirst = false);
 
-	ForceTubeVR void Kick(Byte power, ForceTubeVRChannel target = ForceTubeVRChannel.all);
+	ForceTubeVR void Kick(Byte power, ForceTubeVRChannel target = ForceTubeVRChannel.rifle);
 
-	ForceTubeVR void Rumble(Byte power, float timeInSeconds, ForceTubeVRChannel target = ForceTubeVRChannel.all);
+	ForceTubeVR void Rumble(Byte power, float timeInSeconds, ForceTubeVRChannel target = ForceTubeVRChannel.rifle);
 
-	ForceTubeVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel target = ForceTubeVRChannel.all);
+	ForceTubeVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel target = ForceTubeVRChannel.rifle);
 
 	ForceTubeVR void SetActiveResearch(bool active);
 
@@ -28,11 +28,11 @@ kickPower : value to be set from 0 to 255 (side note : under 76 value (30%) the 
 
 rumblePower : value to be set from 0 to 255
 
-timeInSeconds : set rumble duration in second, 0.1 will activate rumble motor for 100ms (side note : under 0.03s, the motors are not activated enouph to give any effect)
+timeInSeconds : set rumble duration in second, 0.1 will activate rumble motor for 100ms (side note : under 0.03s, the motors are not activated enough to give any effect)
 
-rumbleDuration : set rumble duration in second, 0.1 will activate rumble motor for 100ms (side note : under 0.03s, the motors are not activated enouph to give any effect). You can make a rumble without end setting this parameter to 0.
+rumbleDuration : set rumble duration in second, 0.1 will activate rumble motor for 100ms (side note : under 0.03s, the motors are not activated enough to give any effect). You can make a rumble without end setting this parameter to 0.
 
-target : channel to send the request. "all" redirect to all ForceTubeVR regardless of channels and "rifle" redirect to "rifleButt" and "rifleBolt" chanels. By default, 
+target : channel to send the request. "all" redirect to all ForceTubeVR regardless of channels and "rifle" redirect to "rifleButt" and "rifleBolt" chanels.
 
 active : True = the plugin will maintain a thread to watch the connection state of ForceTubeVR and reconnect if needed ; False = this thread will be desactivated ; it is set to True by default
 
@@ -91,8 +91,8 @@ Those 2 motors are driven by the same signal as following :
 Rumble duration and power can be freely setted up, it depends of your needs
 
 Fonction using it :
-	FORCETUBEVR void Rumble(Byte power, float timeInSeconds);
-	FORCETUBEVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration);
+	FORCETUBEVR void Rumble(Byte power, float timeInSeconds, ForceTubeVRChannel target = ForceTubeVRChannel.rifle);
+	FORCETUBEVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel target = ForceTubeVRChannel.rifle);
 
 ----------------------------------------------------------Kick-----------------------------------------------------------------
 
@@ -141,8 +141,8 @@ M40A5: bolt action = 100% ---> 255 value
 SV98: bolt action = 100% ---> 255 value
 
 Fonction using the kick :
-	FORCETUBEVR void Kick(Byte power);
-	FORCETUBEVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration);
+	FORCETUBEVR void Kick(Byte power, ForceTubeVRChannel target = ForceTubeVRChannel.rifle);
+	FORCETUBEVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel target = ForceTubeVRChannel.rifle);
 
 
 
