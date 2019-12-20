@@ -81,17 +81,19 @@ public class ForceTubeVRInterface : MonoBehaviour
 	///</summary>
 	public static void InitAsync(bool pistolsFirst = false)
 	{
-		#if UNITY_ANDROID && !UNITY_EDITOR
+    #if UNITY_ANDROID && !UNITY_EDITOR
+        if(ForceTubeVRPlugin == null){
 			using (androidClass = new AndroidJavaClass("com.ProTubeVR.ForceTubeVRInterface.ForceTubeVRInterface"))
 			{
-			AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-			AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-			AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
-		ForceTubeVRPlugin = new AndroidJavaObject("com.ProTubeVR.ForceTubeVRInterface.ForceTubeVRInterface", context, pistolsFirst);
+			    AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+			    AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+			    AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
+		        ForceTubeVRPlugin = new AndroidJavaObject("com.ProTubeVR.ForceTubeVRInterface.ForceTubeVRInterface", context, pistolsFirst);
 			}
-		#endif
+        }
+    #endif
 
-		#if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
+    #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
 			if (pistolsFirst) {
 				if (IntPtr.Size == 8) { 
 					InitPistol_x64 ();
@@ -105,13 +107,13 @@ public class ForceTubeVRInterface : MonoBehaviour
 					InitRifle_x32 ();
 				}
 			}
-		#endif
-	}
-    
+    #endif
+    }
+
     ///<summary>
     ///0 = no power, 255 = max power, this function is linear.
     ///</summary>
-	public static void Kick(Byte power, ForceTubeVRChannel target = ForceTubeVRChannel.rifle)
+    public static void Kick(Byte power, ForceTubeVRChannel target = ForceTubeVRChannel.rifle)
     {
         #if UNITY_ANDROID && !UNITY_EDITOR
             if (ForceTubeVRPlugin != null)

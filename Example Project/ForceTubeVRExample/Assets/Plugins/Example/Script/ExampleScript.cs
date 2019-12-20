@@ -6,8 +6,8 @@ public class ExampleScript : MonoBehaviour
 {
     public Text batteryText; 
     private ForceTubeVRInterface forcetubevr;
-    private bool auto = false, activeResearch = true, bluetoothLaunched = false;
-    private float autoTimer = 0.0f, autoDelay = 0.13f, launchBluetoothTimer = 0.0f, launchBluetoothDelay = 5.0f;
+    private bool auto = false, activeResearch = true;
+    private float autoTimer = 0.0f, autoDelay = 0.13f;
 	private ForceTubeVRChannel target; //The example scene will send requests to this channel. The simplest is "all" (sending to all, ignoring the channel) and the channel rifle send requests to both "rifleButt" and "rifleBolt".
 
 
@@ -20,15 +20,6 @@ public class ExampleScript : MonoBehaviour
             {
                 autoTimer -= autoDelay;
 				ForceTubeVRInterface.Shoot(255, 255, 0.5f, target);
-            }
-        }
-        if (!bluetoothLaunched)
-        {
-            launchBluetoothTimer += Time.deltaTime;
-            if (launchBluetoothTimer >= launchBluetoothDelay)
-            {
-                bluetoothLaunched = true;
-                ForceTubeVRInterface.OpenBluetoothSettings(true);
             }
         }
         batteryText.text = "BatteryLevel : " + ForceTubeVRInterface.GetBatteryLevel().ToString() + "%";
@@ -83,6 +74,6 @@ public class ExampleScript : MonoBehaviour
 	[RuntimeInitializeOnLoadMethod]
 	private static void OnLoadRuntimeMethod() // called at RuntimeInitialize
 	{
-		ForceTubeVRInterface.InitAsync(true);
+		ForceTubeVRInterface.InitAsync(false);
 	}
 }
