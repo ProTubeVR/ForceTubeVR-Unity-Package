@@ -625,7 +625,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 125393283}
-        m_MethodName: setActiveResearch
+        m_MethodName: SetActiveResearch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

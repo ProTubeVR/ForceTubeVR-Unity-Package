@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System;
+#if UNITY_ANDROID && !UNITY_EDITOR
+    using System.Collections;
+#endif
 using System.Runtime.InteropServices;
 
 
@@ -14,64 +17,87 @@ public enum ForceTubeVRChannel : int { all, rifle, rifleButt, rifleBolt, pistol1
 public class ForceTubeVRInterface : MonoBehaviour
 {
 
-#if UNITY_ANDROID && !UNITY_EDITOR
+    #if UNITY_ANDROID && !UNITY_EDITOR
 
-    private static AndroidJavaObject ForceTubeVRPlugin = null;
-    private static AndroidJavaClass androidClass = null;
+        private static AndroidJavaObject ForceTubeVRPlugin = null;
+        private static ForceTubeVRInterface instance = null;
 
-#endif
 
-#if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
+        private static IEnumerator InitAndroid(bool pistolsFirst)
+        {
+            yield return new WaitForSeconds(0.1f);
+            if (ForceTubeVRPlugin == null)
+            {
+                AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+                AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+                using (AndroidJavaClass builderClass = new AndroidJavaClass("com.ProTubeVR.ForceTubeVRInterface.ForceTubeVRInterfaceActivity"))
+                {
+                    builderClass.CallStatic("Call", activity, pistolsFirst);
+                    using (new AndroidJavaClass("com.ProTubeVR.ForceTubeVRInterface.ForceTubeVRInterface"))
+                    {
+                        while (ForceTubeVRPlugin == null)
+                        {
+                            yield return new WaitForSeconds(0.1f);
+                            ForceTubeVRPlugin = builderClass.CallStatic<AndroidJavaObject>("InitInterface");
+                        }
+                }
+                }
+            }
+        }
 
-	[DllImport("ForceTubeVR_API_x32", EntryPoint = "InitRifle")]
-	private static extern void InitRifle_x32();
+    #endif
 
-	[DllImport("ForceTubeVR_API_x32", EntryPoint = "InitPistol")]
-	private static extern void InitPistol_x32();
+    #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
 
-    [DllImport("ForceTubeVR_API_x32", EntryPoint = "SetActive")]
-    private static extern void SetActiveResearch_x32(bool active);
-    
-    [DllImport("ForceTubeVR_API_x32", EntryPoint = "KickChannel")]
-	private static extern void Kick_x32(Byte power, ForceTubeVRChannel channel);
-    
-	[DllImport("ForceTubeVR_API_x32", EntryPoint = "RumbleChannel")]
-	private static extern void Rumble_x32(Byte power, float timeInSeconds, ForceTubeVRChannel channel);
+        [DllImport("ForceTubeVR_API_x32", EntryPoint = "InitRifle")]
+	    private static extern void InitRifle_x32();
 
-	[DllImport("ForceTubeVR_API_x32", EntryPoint = "ShotChannel")]
-	private static extern void Shot_x32(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel channel);
-    
-    [DllImport("ForceTubeVR_API_x32", EntryPoint = "TempoToKickPower")]
-    private static extern Byte TempoToKickPower_x32(float tempo);
-    
-    [DllImport("ForceTubeVR_API_x32", EntryPoint = "GetBatteryLevel")]
-    private static extern Byte GetBatteryLevel_x32();
-    
-    [DllImport("ForceTubeVR_API_x64", EntryPoint = "InitRifle")]
-    private static extern void InitRifle_x64();
+	    [DllImport("ForceTubeVR_API_x32", EntryPoint = "InitPistol")]
+	    private static extern void InitPistol_x32();
 
-	[DllImport("ForceTubeVR_API_x64", EntryPoint = "InitPistol")]
-	private static extern void InitPistol_x64();
+        [DllImport("ForceTubeVR_API_x32", EntryPoint = "SetActive")]
+        private static extern void SetActiveResearch_x32(bool active);
+    
+        [DllImport("ForceTubeVR_API_x32", EntryPoint = "KickChannel")]
+	    private static extern void Kick_x32(Byte power, ForceTubeVRChannel channel);
+    
+	    [DllImport("ForceTubeVR_API_x32", EntryPoint = "RumbleChannel")]
+	    private static extern void Rumble_x32(Byte power, float timeInSeconds, ForceTubeVRChannel channel);
 
-    [DllImport("ForceTubeVR_API_x64", EntryPoint = "SetActive")]
-    private static extern void SetActiveResearch_x64(bool active);
+	    [DllImport("ForceTubeVR_API_x32", EntryPoint = "ShotChannel")]
+	    private static extern void Shot_x32(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel channel);
     
-    [DllImport("ForceTubeVR_API_x64", EntryPoint = "KickChannel")]
-	private static extern void Kick_x64(Byte power, ForceTubeVRChannel channel);
+        [DllImport("ForceTubeVR_API_x32", EntryPoint = "TempoToKickPower")]
+        private static extern Byte TempoToKickPower_x32(float tempo);
     
-    [DllImport("ForceTubeVR_API_x64", EntryPoint = "RumbleChannel")]
-	private static extern void Rumble_x64(Byte power, float timeInSeconds, ForceTubeVRChannel channel);
+        [DllImport("ForceTubeVR_API_x32", EntryPoint = "GetBatteryLevel")]
+        private static extern Byte GetBatteryLevel_x32();
     
-    [DllImport("ForceTubeVR_API_x64", EntryPoint = "ShotChannel")]
-	private static extern void Shot_x64(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel channel);
-    
-    [DllImport("ForceTubeVR_API_x64", EntryPoint = "TempoToKickPower")]
-    private static extern Byte TempoToKickPower_x64(float tempo);
-    
-    [DllImport("ForceTubeVR_API_x64", EntryPoint = "GetBatteryLevel")]
-    private static extern Byte GetBatteryLevel_x64();
+        [DllImport("ForceTubeVR_API_x64", EntryPoint = "InitRifle")]
+        private static extern void InitRifle_x64();
 
-#endif
+	    [DllImport("ForceTubeVR_API_x64", EntryPoint = "InitPistol")]
+	    private static extern void InitPistol_x64();
+
+        [DllImport("ForceTubeVR_API_x64", EntryPoint = "SetActive")]
+        private static extern void SetActiveResearch_x64(bool active);
+    
+        [DllImport("ForceTubeVR_API_x64", EntryPoint = "KickChannel")]
+	    private static extern void Kick_x64(Byte power, ForceTubeVRChannel channel);
+    
+        [DllImport("ForceTubeVR_API_x64", EntryPoint = "RumbleChannel")]
+	    private static extern void Rumble_x64(Byte power, float timeInSeconds, ForceTubeVRChannel channel);
+    
+        [DllImport("ForceTubeVR_API_x64", EntryPoint = "ShotChannel")]
+	    private static extern void Shot_x64(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel channel);
+    
+        [DllImport("ForceTubeVR_API_x64", EntryPoint = "TempoToKickPower")]
+        private static extern Byte TempoToKickPower_x64(float tempo);
+    
+        [DllImport("ForceTubeVR_API_x64", EntryPoint = "GetBatteryLevel")]
+        private static extern Byte GetBatteryLevel_x64();
+
+    #endif
 
 	///<summary>
 	///As suggered, this method is asynchronous.
@@ -81,20 +107,17 @@ public class ForceTubeVRInterface : MonoBehaviour
 	///</summary>
 	public static void InitAsync(bool pistolsFirst = false)
 	{
-    #if UNITY_ANDROID && !UNITY_EDITOR
-        if(ForceTubeVRPlugin == null){
-			using (androidClass = new AndroidJavaClass("com.ProTubeVR.ForceTubeVRInterface.ForceTubeVRInterface"))
-			{
-			    AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-			    AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-			    AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
-		        ForceTubeVRPlugin = new AndroidJavaObject("com.ProTubeVR.ForceTubeVRInterface.ForceTubeVRInterface", context, pistolsFirst);
-			}
-        }
-    #endif
+        #if UNITY_ANDROID && !UNITY_EDITOR
+            if(instance == null)
+            {
+                instance = (new GameObject("ForceTubeVRInterface")).AddComponent<ForceTubeVRInterface>();
+                DontDestroyOnLoad(instance);
+            }
+            instance.StartCoroutine(InitAndroid(pistolsFirst));     
+        #endif
 
-    #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
-			if (pistolsFirst) {
+        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
+            if (pistolsFirst) {
 				if (IntPtr.Size == 8) { 
 					InitPistol_x64 ();
 				} else {
@@ -107,7 +130,7 @@ public class ForceTubeVRInterface : MonoBehaviour
 					InitRifle_x32 ();
 				}
 			}
-    #endif
+        #endif
     }
 
     ///<summary>
@@ -123,7 +146,7 @@ public class ForceTubeVRInterface : MonoBehaviour
         #endif
 
         #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
-        if (IntPtr.Size == 8)
+            if (IntPtr.Size == 8)
             {
 				Kick_x64(power, target);
             } else {
