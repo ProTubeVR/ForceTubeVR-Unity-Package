@@ -10,6 +10,12 @@ public class ExampleScript : MonoBehaviour
 	private ForceTubeVRChannel target; //The example scene will send requests to this channel. The simplest is "all" (sending to all, ignoring the channel) and the channel rifle send requests to both "rifleButt" and "rifleBolt".
 
 
+    void Awake()
+    {
+		Debug.Log("InitAsync");
+        ForceTubeVRInterface.InitAsync(false);
+    }
+
     void Update()
     {
         if (auto)
@@ -74,10 +80,4 @@ public class ExampleScript : MonoBehaviour
         Debug.Log("Bluetooth settings");
 		ForceTubeVRInterface.OpenBluetoothSettings(false);
     }
-
-	[RuntimeInitializeOnLoadMethod]
-	private static void OnLoadRuntimeMethod() // called at RuntimeInitialize
-	{
-		ForceTubeVRInterface.InitAsync(false);
-	}
 }

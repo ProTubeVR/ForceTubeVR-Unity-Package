@@ -38,9 +38,9 @@ public class ForceTubeVRInterface : MonoBehaviour
                         while (ForceTubeVRPlugin == null)
                         {
                             yield return new WaitForSeconds(0.1f);
-                            ForceTubeVRPlugin = builderClass.CallStatic<AndroidJavaObject>("InitInterface");
+							ForceTubeVRPlugin = builderClass.CallStatic<AndroidJavaObject>("getInterface");
                         }
-                }
+                	}
                 }
             }
         }
@@ -287,4 +287,14 @@ public class ForceTubeVRInterface : MonoBehaviour
             }
         #endif
     }
+
+	void OnDestroy()
+	{
+		#if UNITY_ANDROID && !UNITY_EDITOR
+		if (ForceTubeVRPlugin != null)
+		{
+			ForceTubeVRPlugin.Call("stop");
+		}
+		#endif
+	}
 }
