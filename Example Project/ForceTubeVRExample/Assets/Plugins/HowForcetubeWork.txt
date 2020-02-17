@@ -20,6 +20,8 @@ Fonctions:
 
 	ForceTubeVR Byte GetBatteryLevel();
 
+	ForceTubeVR void OpenBluetoothSettings();
+
 units : 
 
 power : value to be set from 0 to 255
@@ -162,3 +164,9 @@ FORCETUBEVR void Shot(Byte kickPower, Byte rumblePower, float rumbleDuration);
 Use it to get battery value of the connected ForceTubeVR
 You will obtain an unsigned byte, representing the percent of battery, so it's a value between 0 and 100.
 This function is obsolete because it always give the battery level from the first ForceTubeVR used. Now this plugin can manage more than one ForceTubeVR, it can be source of problems.
+
+
+----------------------------------------------------------OpenBluetoothSettings-----------------------------------------------------------
+
+Only on Android system, launch the default bluetooth settings activity. Does nothing on Windows.
+This can be useful if you want to let users connect their ForceTubeVR directly in your game. 

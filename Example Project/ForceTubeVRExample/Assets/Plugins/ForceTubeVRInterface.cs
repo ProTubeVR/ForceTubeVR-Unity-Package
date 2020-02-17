@@ -276,14 +276,13 @@ public class ForceTubeVRInterface : MonoBehaviour
 
 	///<summary>
 	///Only in Android system, launch the bluetooth settings activity, if you want to let users connect their ForceTubeVR in your game. 
-	///If isInVR is true, launch this activity in the Oculus Quest application dedicated to VR TV.
 	///</summary>
-    public static void OpenBluetoothSettings(bool isInVR)
+    public static void OpenBluetoothSettings()
     {
         #if UNITY_ANDROID && !UNITY_EDITOR
             if (ForceTubeVRPlugin != null)
             {
-                ForceTubeVRPlugin.Call("openBluetoothSettings", isInVR);
+                ForceTubeVRPlugin.Call("openBluetoothSettings", false);
             }
         #endif
     }

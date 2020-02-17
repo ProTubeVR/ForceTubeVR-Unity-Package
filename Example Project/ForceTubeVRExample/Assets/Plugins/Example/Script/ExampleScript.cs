@@ -69,15 +69,9 @@ public class ExampleScript : MonoBehaviour
         ForceTubeVRInterface.SetActiveResearch(activeResearch);
     }
 
-    public void BluetoothSettingsVR()
+    public void OpenBluetoothSettings()
     {
-        Debug.Log("Bluetooth settings");
-        ForceTubeVRInterface.OpenBluetoothSettings(true);
-    }
-
-    public void BluetoothSettingsPhone()
-    {
-        Debug.Log("Bluetooth settings");
-		ForceTubeVRInterface.OpenBluetoothSettings(false);
+        Debug.Log("Tyry open Bluetooth settings");
+        ForceTubeVRInterface.OpenBluetoothSettings();
     }
 }
