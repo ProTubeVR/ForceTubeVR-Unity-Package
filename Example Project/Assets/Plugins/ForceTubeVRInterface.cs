@@ -16,7 +16,6 @@ public enum ForceTubeVRChannel : int { all, rifle, rifleButt, rifleBolt, pistol1
 
 public class ForceTubeVRInterface : MonoBehaviour
 {
-
     #if UNITY_ANDROID && !UNITY_EDITOR
 
         private static AndroidJavaObject ForceTubeVRPlugin = null;
@@ -32,15 +31,7 @@ public class ForceTubeVRInterface : MonoBehaviour
                 AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
                 using (AndroidJavaClass builderClass = new AndroidJavaClass("com.ProTubeVR.ForceTubeVRInterface.ForceTubeVRInterface"))
                 {
-                    /*builderClass.CallStatic("Call", activity, pistolsFirst);
-                    using (new AndroidJavaClass("com.ProTubeVR.ForceTubeVRInterface.ForceTubeVRInterface"))
-                    {
-                        while (ForceTubeVRPlugin == null)
-                        {
-                            yield return new WaitForSeconds(0.1f);*/
-				ForceTubeVRPlugin = builderClass.CallStatic<AndroidJavaObject>("getInstance", activity, pistolsFirst);
-                        /*}
-                	}*/
+				    ForceTubeVRPlugin = builderClass.CallStatic<AndroidJavaObject>("getInstance", activity, pistolsFirst);
                 }
             }
         }
