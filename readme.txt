@@ -1,8 +1,5 @@
-Enum :
+/!\ InitAsync is the first function you need to call in order to work with the ForceTube.
 
-ForceTubeVRChannel : enum with values { all, rifle, rifleButt, rifleBolt, pistol1, pistol2, other, vest }. 
-
-"all" and "rifle" aren't real channels because "all" redirect to all ForceTubeVR regardless of channels and "rifle" redirect to "rifleButt" and "rifleBolt" chanels.
 
 Fonctions:
 
@@ -39,6 +36,10 @@ target : channel to send the request. "all" redirect to all ForceTubeVR regardle
 active : True = the plugin will maintain a thread to watch the connection state of ForceTubeVR and reconnect if needed ; False = this thread will be desactivated ; it is set to True by default
 
 tempo : duration in seconds between two shots(for auto-shots)
+
+ForceTubeVRChannel : enum with values { all, rifle, rifleButt, rifleBolt, pistol1, pistol2, other, vest }. 
+
+"all" and "rifle" aren't real channels because "all" redirect to all ForceTubeVR regardless of channels and "rifle" redirect to "rifleButt" and "rifleBolt" chanels.
 
 -----------------------------------------------------------Connect--------------------------------------------------------------------------
 

@@ -16,10 +16,11 @@ public enum ForceTubeVRChannel : int { all, rifle, rifleButt, rifleBolt, pistol1
 
 public class ForceTubeVRInterface : MonoBehaviour
 {
+    private static ForceTubeVRInterface instance = null;
     #if UNITY_ANDROID && !UNITY_EDITOR
 
         private static AndroidJavaObject ForceTubeVRPlugin = null;
-        private static ForceTubeVRInterface instance = null;
+        
 
 
         private static IEnumerator InitAndroid(bool pistolsFirst)
@@ -36,11 +37,11 @@ public class ForceTubeVRInterface : MonoBehaviour
             }
         }
 
-    #endif
+#endif
 
-    #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
+#if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA)
 
-        [DllImport("ForceTubeVR_API_x32", EntryPoint = "InitRifle")]
+    [DllImport("ForceTubeVR_API_x32", EntryPoint = "InitRifle")]
 	    private static extern void InitRifle_x32();
 
 	    [DllImport("ForceTubeVR_API_x32", EntryPoint = "InitPistol")]
@@ -98,17 +99,19 @@ public class ForceTubeVRInterface : MonoBehaviour
 	///</summary>
 	public static void InitAsync(bool pistolsFirst = false)
 	{
-        #if UNITY_ANDROID && !UNITY_EDITOR
-            if(instance == null)
-            {
-                instance = (new GameObject("ForceTubeVRInterface")).AddComponent<ForceTubeVRInterface>();
-                DontDestroyOnLoad(instance);
-            }
-            instance.StartCoroutine(InitAndroid(pistolsFirst));     
-        #endif
 
-        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
-            if (pistolsFirst) {
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+        if (instance == null)
+        {
+            instance = (new GameObject("ForceTubeVRInterface")).AddComponent<ForceTubeVRInterface>();
+            DontDestroyOnLoad(instance);
+        }
+            instance.StartCoroutine(InitAndroid(pistolsFirst));     
+#endif
+
+#if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA)
+        if (pistolsFirst) {
 				if (IntPtr.Size == 8) { 
 					InitPistol_x64 ();
 				} else {
@@ -129,15 +132,15 @@ public class ForceTubeVRInterface : MonoBehaviour
     ///</summary>
     public static void Kick(Byte power, ForceTubeVRChannel target = ForceTubeVRChannel.rifle)
     {
-        #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
             if (ForceTubeVRPlugin != null)
             {
 				ForceTubeVRPlugin.Call("sendKick", power, (int)target);
             }
-        #endif
+#endif
 
-        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
-            if (IntPtr.Size == 8)
+#if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA)
+        if (IntPtr.Size == 8)
             {
 				Kick_x64(power, target);
             } else {
@@ -152,15 +155,15 @@ public class ForceTubeVRInterface : MonoBehaviour
     ///</summary>
 	public static void Rumble(Byte power, float duration, ForceTubeVRChannel target = ForceTubeVRChannel.rifle)
     {
-        #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
             if (ForceTubeVRPlugin != null)
             {
 				ForceTubeVRPlugin.Call("sendRumble", power, (int) (duration * 1000.0f), (int)target);
             }
-        #endif
+#endif
 
-        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
-            if (IntPtr.Size == 8)
+#if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA)
+        if (IntPtr.Size == 8)
             { 
 				Rumble_x64(power, duration, target);
             } else {
@@ -175,15 +178,15 @@ public class ForceTubeVRInterface : MonoBehaviour
     ///</summary>
 	public static void Shoot(Byte kickPower, Byte rumblePower, float rumbleDuration, ForceTubeVRChannel target = ForceTubeVRChannel.rifle)
     {
-        #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
             if (ForceTubeVRPlugin != null)
             {
 				ForceTubeVRPlugin.Call("sendShot", kickPower, rumblePower, (int)(rumbleDuration * 1000.0f), (int)target);
             }
-        #endif
+#endif
 
-        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
-            if (IntPtr.Size == 8)
+#if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA)
+        if (IntPtr.Size == 8)
             { 
 				Shot_x64(kickPower, rumblePower, rumbleDuration, target);
             } else {
@@ -205,7 +208,7 @@ public class ForceTubeVRInterface : MonoBehaviour
             }
         #endif
 
-        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
+        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA)
             if (IntPtr.Size == 8)
             { 
                 SetActiveResearch_x64(active);
@@ -221,17 +224,17 @@ public class ForceTubeVRInterface : MonoBehaviour
     ///</summary>
     public static Byte TempoToKickPower(float tempo)
     {
-        #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
             if (ForceTubeVRPlugin != null)
             {
                 return ForceTubeVRPlugin.Call<Byte>("tempoToKickPower", tempo);
             } else {
                 return 255;
             }
-        #endif
+#endif
 
-        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
-            if (IntPtr.Size == 8)
+#if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA )
+        if (IntPtr.Size == 8)
             { 
                 return TempoToKickPower_x64(tempo);
             } else {
@@ -255,7 +258,7 @@ public class ForceTubeVRInterface : MonoBehaviour
             }
         #endif
 
-        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
+        #if (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA)
             if (IntPtr.Size == 8)
             { 
                 return GetBatteryLevel_x64();
