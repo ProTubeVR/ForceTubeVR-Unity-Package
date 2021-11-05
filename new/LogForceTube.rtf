@@ -1,0 +1,1139 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1036{\fonttbl{\f0\fmodern Consolas;}{\f1\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red20\green20\blue20;\red142\green142\blue142;\red9\green118\blue72;\red170\green64\blue64;\red126\green126\blue12;\red85\green85\blue85;\red170\green51\blue170;}
+\viewkind4\uc1\pard\f0\fs20 ets Jun  8 2016 00:22:57\cf1\highlight2 
+\par 
+\par \cf0\highlight0 rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)\cf1\highlight2 
+\par \cf0\highlight0 configsip: 188777542, SPIWP:0xee\cf1\highlight2 
+\par \cf0\highlight0 clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00\cf1\highlight2 
+\par \cf0\highlight0 mode:DIO, clock div:2\cf1\highlight2 
+\par \cf0\highlight0 load:0x3fff0030,len:4\cf1\highlight2 
+\par \cf0\highlight0 load:0x3fff0034,len:7132\cf1\highlight2 
+\par \cf0\highlight0 load:0x40078000,len:13696\cf1\highlight2 
+\par \cf0\highlight0 load:0x40080400,len:4000\cf1\highlight2 
+\par \cf0\highlight0 entry 0x40080688\cf1\highlight2 
+\par \cf3\highlight0 I (29) boot: ESP-IDF v4.2-dev-1995-g636b964c8-dirty 2nd stage bootloader\cf1\highlight2 
+\par \cf3\highlight0 I (29) boot: compile time 11:51:50\cf1\highlight2 
+\par \cf3\highlight0 I (30) boot: chip revision: 1\cf1\highlight2 
+\par \cf3\highlight0 I (34) boot_comm: chip revision: 1, min. bootloader chip revision: 0\cf1\highlight2 
+\par \cf3\highlight0 I (41) boot.esp32: SPI Speed      : 40MHz\cf1\highlight2 
+\par \cf3\highlight0 I (46) boot.esp32: SPI Mode       : DIO\cf1\highlight2 
+\par \cf3\highlight0 I (50) boot.esp32: SPI Flash Size : 4MB\cf1\highlight2 
+\par \cf3\highlight0 I (55) boot: Enabling RNG early entropy source...\cf1\highlight2 
+\par \cf3\highlight0 I (60) boot: Partition Table:\cf1\highlight2 
+\par \cf3\highlight0 I (64) boot: ## Label            Usage          Type ST Offset   Length\cf1\highlight2 
+\par \cf3\highlight0 I (71) boot:  0 nvs              WiFi data        01 02 00009000 00005000\cf1\highlight2 
+\par \cf3\highlight0 I (78) boot:  1 otadata          OTA data         01 00 0000e000 00002000\cf1\highlight2 
+\par \cf3\highlight0 I (86) boot:  2 app0             OTA app          00 10 00010000 001e0000\cf1\highlight2 
+\par \cf3\highlight0 I (93) boot:  3 app1             OTA app          00 11 001f0000 001e0000\cf1\highlight2 
+\par \cf3\highlight0 I (101) boot:  4 storage          Unknown data     01 82 003d0000 00030000\cf1\highlight2 
+\par \cf3\highlight0 I (108) boot: End of partition table\cf1\highlight2 
+\par \cf3\highlight0 I (113) boot_comm: chip revision: 1, min. application chip revision: 0\cf1\highlight2 
+\par \cf3\highlight0 I (120) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x358e0 (2\cf1\highlight2 
+\par \cf3\highlight0 I (212) esp_image: segment 1: paddr=0x00045908 vaddr=0x3ffbdb60 size=0x03fc0 (\cf1\highlight2 
+\par \cf3\highlight0 I (219) esp_image: segment 2: paddr=0x000498d0 vaddr=0x40080000 size=0x00404 (\cf1\highlight2 
+\par \cf3\highlight0 I (220) esp_image: segment 3: paddr=0x00049cdc vaddr=0x40080404 size=0x0633c (\cf1\highlight2 
+\par \cf3\highlight0 I (239) esp_image: segment 4: paddr=0x00050020 vaddr=0x400d0020 size=0xf4488 (1\cf1\highlight2 
+\par \cf3\highlight0 I (620) esp_image: segment 5: paddr=0x001444b0 vaddr=0x40086740 size=0x16df8 (\cf1\highlight2 
+\par \cf3\highlight0 I (677) boot: Loaded app from partition at offset 0x10000\cf1\highlight2 
+\par \cf3\highlight0 I (677) boot: Disabling RNG early entropy source...\cf1\highlight2 
+\par \cf3\highlight0 I (677) cpu_start: Pro cpu up.\cf1\highlight2 
+\par \cf3\highlight0 I (681) cpu_start: Application information:\cf1\highlight2 
+\par \cf3\highlight0 I (686) cpu_start: Project name:     ProTubeVRFw\cf1\highlight2 
+\par \cf3\highlight0 I (691) cpu_start: App version:      e0d1ad3-dirty\cf1\highlight2 
+\par \cf3\highlight0 I (696) cpu_start: Compile time:     Oct 19 2021 14:25:51\cf1\highlight2 
+\par \cf3\highlight0 I (702) cpu_start: ELF file SHA256:  e7d7e60988d20e54...\cf1\highlight2 
+\par \cf3\highlight0 I (708) cpu_start: ESP-IDF:          v4.2-dev-1995-g636b964c8-dirty\cf1\highlight2 
+\par \cf3\highlight0 I (715) cpu_start: Starting app cpu, entry point is 0x400816a8\cf1\highlight2 
+\par \cf3\highlight0 I (0) cpu_start: App cpu up.\cf1\highlight2 
+\par \cf3\highlight0 I (726) heap_init: Initializing. RAM available for dynamic allocation:\cf1\highlight2 
+\par \cf3\highlight0 I (733) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (739) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (745) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (751) heap_init: At 3FFD24A0 len 0000DB60 (54 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (757) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM\cf1\highlight2 
+\par \cf3\highlight0 I (763) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM\cf1\highlight2 
+\par \cf3\highlight0 I (770) heap_init: At 4009D538 len 00002AC8 (10 KiB): IRAM\cf1\highlight2 
+\par \cf3\highlight0 I (776) cpu_start: Pro cpu start user code\cf1\highlight2 
+\par \cf3\highlight0 I (798) spi_flash: detected chip: gd\cf1\highlight2 
+\par \cf3\highlight0 I (798) spi_flash: flash io: dio\cf1\highlight2 
+\par \cf3\highlight0 I (799) cpu_start: Starting scheduler on PRO CPU.\cf1\highlight2 
+\par \cf3\highlight0 I (0) cpu_start: Starting scheduler on APP CPU.\cf1\highlight2 
+\par \cf3\highlight0 I (827) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulld\cf1\highlight2 
+\par \cf3\highlight0 I (827) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulld\cf1\highlight2 
+\par \cf3\highlight0 I (837) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldo\cf1\highlight2 
+\par \cf3\highlight0 I (847) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldo\cf1\highlight2 
+\par \cf3\highlight0 I (857) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldo\cf1\highlight2 
+\par \cf3\highlight0 I (867) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulld\cf1\highlight2 
+\par \cf3\highlight0 I (877) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulld\cf1\highlight2 
+\par \cf3\highlight0 I (887) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulld\cf1\highlight2 
+\par \cf3\highlight0 I (907) MAIN: Device Name ForceTubeVR 750890267\cf1\highlight2 
+\par \cf3\highlight0 I (917) BTDM_INIT: BT controller compile version [c293075]\cf1\highlight2 
+\par \cf3\highlight0 I (917) system_api: Base MAC address is not set\cf1\highlight2 
+\par \cf3\highlight0 I (917) system_api: read default base MAC address from EFUSE\cf1\highlight2 
+\par \cf3\highlight0 I (1027) phy: phy_version: 4182, f1ba940, Jun  4 2020, 19:40:07, 0, 0\cf1\highlight2 
+\par \cf3\highlight0 I (1587) IBluetooth: ESP_SPP_INIT_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (1607) IBluetooth: event: 10\cf1\highlight2 
+\par \cf3\highlight0 I (1607) IBluetooth: ESP_SPP_START_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (3807) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (3807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (3817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (6807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (6807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (6817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (9807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (9807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (9817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (12807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (12807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (12817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (15807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (15807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (15817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (18807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (18807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (18817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (20687) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (20687) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (20687) IBluetooth: ESP_SPP_OPEN_EVT 129\cf1\highlight2 
+\par \cf3\highlight0 I (20687) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (20687) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (20697) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (21707) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (22707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (22707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (22717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (25707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (25707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (25717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (28707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (28707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (28717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (31707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (31707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (31717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (31837) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Close\cf1\highlight2 
+\par \cf3\highlight0 I (31837) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (31837) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (31877) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (31877) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41\cf1\highlight2 
+\par \cf3\highlight0 I (34707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (34707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (34717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (37707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (37707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (37717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (40707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (40707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (40717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (43707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (43707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (43717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (46707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (46707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (46717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (49707) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (49707) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (49717) IBluetooth: ESP_SPP_OPEN_EVT 385\cf1\highlight2 
+\par \cf3\highlight0 I (49717) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (49717) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (49727) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (49727) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (49737) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (49747) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (50717) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (52707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (52707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (52717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (55707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (55707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (55717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (58707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (58707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (58717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (61707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (61707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (61717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (64707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (64707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (64717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (67707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (67707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (67717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (70707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (70707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (70717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (70837) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Close\cf1\highlight2 
+\par \cf3\highlight0 I (70837) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (70837) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (70897) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x44 current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (70897) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x44\cf1\highlight2 
+\par \cf3\highlight0 I (73707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (73707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (73717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (76707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (76707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (76717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (79707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (79707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (79717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (82707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (82707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (82717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (85707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (85707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (85717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (88707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (88707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (88717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (91707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (91707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (91717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (94707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (94707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (94717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (97707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (97707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (97717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (98457) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (98467) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (98467) IBluetooth: ESP_SPP_OPEN_EVT 129\cf1\highlight2 
+\par \cf3\highlight0 I (98467) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (98467) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (98477) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (99497) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (100707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (100707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (100717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (103707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (103707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (103717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (106707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (106707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (106717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (109707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (109707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (109717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (112707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (112707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (112717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (115707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (115707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (115717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (118707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (118707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (118717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (121707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (121707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (121717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (124707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (124707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (124717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (124787) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Clos\cf1\highlight2 
+\par \cf3\highlight0 I (124787) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (124787) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (124817) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x47 current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (124827) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x47\cf1\highlight2 
+\par \cf3\highlight0 I (127707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (127707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (127717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (130707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (130707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (130717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (133707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (133707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (133717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (136707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (136707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (136717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (139707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (139707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (139717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (142707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (142707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (142717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (145707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (145707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (145717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (148707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (148707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (148717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (151707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (151707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (151717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (152307) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (152317) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (152317) IBluetooth: ESP_SPP_OPEN_EVT 385\cf1\highlight2 
+\par \cf3\highlight0 I (152317) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (152317) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (152387) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (153387) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (154707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (154707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (154717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (157707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (157707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (157717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (160707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (160707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (160717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (163707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (163707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (163717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (166707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (166707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (166717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (169707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (169707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (169717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (172707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (172707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (172717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (175707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (175707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (175717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (178707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (178707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (178717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (178777) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Clos: 19)\cf1\highlight2 
+\par \cf3\highlight0 I (178777) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (178777) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (178807) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x4a current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (178807) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x4a\cf1\highlight2 
+\par \cf3\highlight0 I (181707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (181707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (181717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (184707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (184707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (184717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (187707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (187707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (187717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (190707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (190707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (190717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (193707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (193707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (193717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (196707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (196707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (196717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (199707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (199707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (199717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (202707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (202707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (202717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (205707) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (205707) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (205717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (206107) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (206107) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (206107) IBluetooth: ESP_SPP_OPEN_EVT 129\cf1\highlight2 
+\par \cf3\highlight0 I (206107) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (206117) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (206117) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (207107) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (208707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (208707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (208717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (211707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (211707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (211717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (214707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (214707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (214717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (217707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (217707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (217717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (220707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (220707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (220717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (223707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (223707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (223717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (226707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (226707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (226717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (229707) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (229707) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (229717) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (232307) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Clos: 19)\cf1\highlight2 
+\par \cf3\highlight0 I (232307) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (232307) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (232367) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x4d current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (232367) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x4d\cf1\highlight2 
+\par \cf3\highlight0 I (233317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (233317) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (233327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (236317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (236317) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (236327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (239317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (239317) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (239327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (242317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (242317) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (242327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (245317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (245317) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (245327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (248317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (248317) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (248327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (251317) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (251317) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (251327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (254317) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (254317) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (254327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (254907) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (254907) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (254907) IBluetooth: ESP_SPP_OPEN_EVT 385\cf1\highlight2 
+\par \cf3\highlight0 I (254907) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (254917) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (254967) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (255947) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (257317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (257317) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (257327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (260317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (260317) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (260327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (263317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (263317) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (263327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (266317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (266317) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (266327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (269317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (269317) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (269327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (272317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (272317) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (272327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (275317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (275317) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (275327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (278317) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (278317) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (278327) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (281067) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Clos: 19)\cf1\highlight2 
+\par \cf3\highlight0 I (281077) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (281077) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (281107) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x40 current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (281107) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x40\cf1\highlight2 
+\par \cf3\highlight0 I (282087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (282087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (282097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (285087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (285087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (285097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (288087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (288087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (288097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (291087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (291087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (291097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (294087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (294087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (294097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (297087) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (297087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (297097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (300087) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (300087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (300097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (303087) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (303087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (303097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (303497) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (303497) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (303497) IBluetooth: ESP_SPP_OPEN_EVT 129\cf1\highlight2 
+\par \cf3\highlight0 I (303507) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (303507) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (303507) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (304507) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (306087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (306087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (306097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (309087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (309087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (309097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (312087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (312087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (312097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (315087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (315087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (315097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (318087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (318087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (318097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (321087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (321087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (321097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (324087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (324087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (324097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (324647) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Clos: 19)\cf1\highlight2 
+\par \cf3\highlight0 I (324647) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (324647) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (324677) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x43 current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (324677) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x43\cf1\highlight2 
+\par \cf3\highlight0 I (327087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (327087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (327097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (330087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (330087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (330097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (333087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (333087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (333097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (336087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (336087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (336097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (339087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (339087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (339097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (342087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (342087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (342097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (345087) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (345087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (345097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (348087) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (348087) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (348097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (348287) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (348287) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (348297) IBluetooth: ESP_SPP_OPEN_EVT 385\cf1\highlight2 
+\par \cf3\highlight0 I (348297) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (348297) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (348297) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (349297) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (351087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (351087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (351097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (354087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (354087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (354097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (357087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (357087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (357097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (360087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (360087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (360097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (363087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (363087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (363097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (366087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (366087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (366097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (369087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (369087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (369097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (372087) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (372087) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (372097) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (374467) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Clos: 19)\cf1\highlight2 
+\par \cf3\highlight0 I (374467) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (374467) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (374527) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x46 current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (374527) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x46\cf1\highlight2 
+\par \cf3\highlight0 I (375477) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (375477) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (375487) PowerManagement: Version Number : 62\cf1\highlight2 
+\par 
+\par \cf4\highlight0 Error reading from serial device\cf1\highlight2 
+\par 
+\par \cf6\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight2 
+\par 
+\par \cf4\highlight0 Session stopped\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 <return>\cf0  to exit tab\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 R\cf0  to restart session\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 S\cf0  to save terminal output to file\cf1\highlight2 
+\par 
+\par \cf6\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight2 
+\par 
+\par \cf4\highlight0 Session stopped\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 <return>\cf0  to exit tab\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 R\cf0  to restart session\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 S\cf0  to save terminal output to file\cf1\highlight2 
+\par \cf0\highlight0 ets Jun  8 2016 00:22:57\cf1\highlight2 
+\par 
+\par \cf0\highlight0 rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)\cf1\highlight2 
+\par \cf0\highlight0 configsip: 188777542, SPIWP:0xee\cf1\highlight2 
+\par \cf0\highlight0 clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00\cf1\highlight2 
+\par \cf0\highlight0 mode:DIO, clock div:2\cf1\highlight2 
+\par \cf0\highlight0 load:0x3fff0030,len:4\cf1\highlight2 
+\par \cf0\highlight0 load:0x3fff0034,len:7132\cf1\highlight2 
+\par \cf0\highlight0 load:0x40078000,len:13696\cf1\highlight2 
+\par \cf0\highlight0 load:0x40080400,len:4000\cf1\highlight2 
+\par \cf0\highlight0 entry 0x40080688\cf1\highlight2 
+\par \cf3\highlight0 I (29) boot: ESP-IDF v4.2-dev-1995-g636b964c8-dirty 2nd stage bootloader\cf1\highlight2 
+\par \cf3\highlight0 I (29) boot: compile time 11:51:50\cf1\highlight2 
+\par \cf3\highlight0 I (30) boot: chip revision: 1\cf1\highlight2 
+\par \cf3\highlight0 I (34) boot_comm: chip revision: 1, min. bootloader chip revision: 0\cf1\highlight2 
+\par \cf3\highlight0 I (41) boot.esp32: SPI Speed      : 40MHz\cf1\highlight2 
+\par \cf3\highlight0 I (46) boot.esp32: SPI Mode       : DIO\cf1\highlight2 
+\par \cf3\highlight0 I (50) boot.esp32: SPI Flash Size : 4MB\cf1\highlight2 
+\par \cf3\highlight0 I (55) boot: Enabling RNG early entropy source...\cf1\highlight2 
+\par \cf3\highlight0 I (60) boot: Partition Table:\cf1\highlight2 
+\par \cf3\highlight0 I (64) boot: ## Label            Usage          Type ST Offset   Length\cf1\highlight2 
+\par \cf3\highlight0 I (71) boot:  0 nvs              WiFi data        01 02 00009000 00005000\cf1\highlight2 
+\par \cf3\highlight0 I (78) boot:  1 otadata          OTA data         01 00 0000e000 00002000\cf1\highlight2 
+\par \cf3\highlight0 I (86) boot:  2 app0             OTA app          00 10 00010000 001e0000\cf1\highlight2 
+\par \cf3\highlight0 I (93) boot:  3 app1             OTA app          00 11 001f0000 001e0000\cf1\highlight2 
+\par \cf3\highlight0 I (101) boot:  4 storage          Unknown data     01 82 003d0000 00030000\cf1\highlight2 
+\par \cf3\highlight0 I (108) boot: End of partition table\cf1\highlight2 
+\par \cf3\highlight0 I (113) boot_comm: chip revision: 1, min. application chip revision: 0\cf1\highlight2 
+\par \cf3\highlight0 I (120) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x358e0 (2map\cf1\highlight2 
+\par \cf3\highlight0 I (212) esp_image: segment 1: paddr=0x00045908 vaddr=0x3ffbdb60 size=0x03fc0 ( load\cf1\highlight2 
+\par \cf3\highlight0 I (219) esp_image: segment 2: paddr=0x000498d0 vaddr=0x40080000 size=0x00404 ( load\cf1\highlight2 
+\par \cf3\highlight0 I (220) esp_image: segment 3: paddr=0x00049cdc vaddr=0x40080404 size=0x0633c ( load\cf1\highlight2 
+\par \cf3\highlight0 I (239) esp_image: segment 4: paddr=0x00050020 vaddr=0x400d0020 size=0xf4488 (1 map\cf1\highlight2 
+\par \cf3\highlight0 I (620) esp_image: segment 5: paddr=0x001444b0 vaddr=0x40086740 size=0x16df8 ( load\cf1\highlight2 
+\par \cf3\highlight0 I (677) boot: Loaded app from partition at offset 0x10000\cf1\highlight2 
+\par \cf3\highlight0 I (677) boot: Disabling RNG early entropy source...\cf1\highlight2 
+\par \cf3\highlight0 I (677) cpu_start: Pro cpu up.\cf1\highlight2 
+\par \cf3\highlight0 I (681) cpu_start: Application information:\cf1\highlight2 
+\par \cf3\highlight0 I (686) cpu_start: Project name:     ProTubeVRFw\cf1\highlight2 
+\par \cf3\highlight0 I (691) cpu_start: App version:      e0d1ad3-dirty\cf1\highlight2 
+\par \cf3\highlight0 I (696) cpu_start: Compile time:     Oct 19 2021 14:25:51\cf1\highlight2 
+\par \cf3\highlight0 I (702) cpu_start: ELF file SHA256:  e7d7e60988d20e54...\cf1\highlight2 
+\par \cf3\highlight0 I (708) cpu_start: ESP-IDF:          v4.2-dev-1995-g636b964c8-dirty\cf1\highlight2 
+\par \cf3\highlight0 I (715) cpu_start: Starting app cpu, entry point is 0x400816a8\cf1\highlight2 
+\par \cf3\highlight0 I (0) cpu_start: App cpu up.\cf1\highlight2 
+\par \cf3\highlight0 I (726) heap_init: Initializing. RAM available for dynamic allocation:\cf1\highlight2 
+\par \cf3\highlight0 I (733) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (739) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (745) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (751) heap_init: At 3FFD24A0 len 0000DB60 (54 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (757) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM\cf1\highlight2 
+\par \cf3\highlight0 I (763) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM\cf1\highlight2 
+\par \cf3\highlight0 I (770) heap_init: At 4009D538 len 00002AC8 (10 KiB): IRAM\cf1\highlight2 
+\par \cf3\highlight0 I (776) cpu_start: Pro cpu start user code\cf1\highlight2 
+\par \cf3\highlight0 I (798) spi_flash: detected chip: gd\cf1\highlight2 
+\par \cf3\highlight0 I (798) spi_flash: flash io: dio\cf1\highlight2 
+\par \cf3\highlight0 I (799) cpu_start: Starting scheduler on PRO CPU.\cf1\highlight2 
+\par \cf3\highlight0 I (0) cpu_start: Starting scheduler on APP CPU.\cf1\highlight2 
+\par \cf3\highlight0 I (827) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (827) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (837) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| PulldoIntr:0\cf1\highlight2 
+\par \cf3\highlight0 I (847) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| PulldoIntr:0\cf1\highlight2 
+\par \cf3\highlight0 I (857) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| PulldoIntr:0\cf1\highlight2 
+\par \cf3\highlight0 I (867) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (877) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (887) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (907) MAIN: Device Name ForceTubeVR 750890267\cf1\highlight2 
+\par \cf3\highlight0 I (917) BTDM_INIT: BT controller compile version [c293075]\cf1\highlight2 
+\par \cf3\highlight0 I (917) system_api: Base MAC address is not set\cf1\highlight2 
+\par \cf3\highlight0 I (917) system_api: read default base MAC address from EFUSE\cf1\highlight2 
+\par \cf3\highlight0 I (1017) phy: phy_version: 4182, f1ba940, Jun  4 2020, 19:40:07, 0, 0\cf1\highlight2 
+\par \cf3\highlight0 I (1587) IBluetooth: ESP_SPP_INIT_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (1607) IBluetooth: event: 10\cf1\highlight2 
+\par \cf3\highlight0 I (1607) IBluetooth: ESP_SPP_START_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (3807) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (3807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (3817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (6807) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (6807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (6817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (9807) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (9807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (9817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (12807) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (12807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (12817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (15807) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (15807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (15817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (18807) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (18807) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (18817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (19217) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (19217) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (19227) IBluetooth: ESP_SPP_OPEN_EVT 129\cf1\highlight2 
+\par \cf3\highlight0 I (19227) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (19227) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (19257) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (20227) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (21807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (21807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (21817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (24807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (24807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (24817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (27807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (27807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (27817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (30807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (30807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (30817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (33807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (33807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (33817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (36807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (36807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (36817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (39807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (39807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (39817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (42807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (42807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (42817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (45807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (45807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (45817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (48807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (48807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (48817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (51807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (51807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (51817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (54807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (54807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (54817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (57807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (57807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (57817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (60807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (60807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (60817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (63807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (63807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (63817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (66807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (66807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (66817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (69807) PTVR_Bluetooth: SendBatteryValue 80\cf1\highlight2 
+\par \cf3\highlight0 I (69807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (69817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (69867) PTVR_Bluetooth: BTPacket code 0\cf1\highlight2 
+\par \cf3\highlight0 I (69867) PTVR_Bluetooth: OnKick 255\cf1\highlight2 
+\par \cf3\highlight0 I (69867) PTVR_Bluetooth: BTPacket code 0\cf1\highlight2 
+\par \cf3\highlight0 I (69867) PTVR_Bluetooth: OnKick 0\cf1\highlight2 
+\par \cf3\highlight0 I (72807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (72807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (72817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (74717) PTVR_Bluetooth: BTPacket code 0\cf1\highlight2 
+\par \cf3\highlight0 I (74717) PTVR_Bluetooth: OnKick 255\cf1\highlight2 
+\par \cf3\highlight0 I (74717) PTVR_Bluetooth: BTPacket code 0\cf1\highlight2 
+\par \cf3\highlight0 I (74717) PTVR_Bluetooth: OnKick 0\cf1\highlight2 
+\par \cf3\highlight0 I (75807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (75807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (75817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (78807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (78807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (78817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (81807) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (81807) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (81817) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf0\highlight0 ets Jun  8 2016 00:22:57\cf1\highlight2 
+\par 
+\par \cf0\highlight0 rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)\cf1\highlight2 
+\par \cf0\highlight0 configsip: 188777542, SPIWP:0xee\cf1\highlight2 
+\par \cf0\highlight0 clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00\cf1\highlight2 
+\par \cf0\highlight0 mode:DIO, clock div:2\cf1\highlight2 
+\par \cf0\highlight0 load:0x3fff0030,len:4\cf1\highlight2 
+\par \cf0\highlight0 load:0x3fff0034,len:7132\cf1\highlight2 
+\par \cf0\highlight0 load:0x40078000,len:13696\cf1\highlight2 
+\par \cf0\highlight0 load:0x40080400,len:4000\cf1\highlight2 
+\par \cf0\highlight0 entry 0x40080688\cf1\highlight2 
+\par \cf3\highlight0 I (29) boot: ESP-IDF v4.2-dev-1995-g636b964c8-dirty 2nd stage bootloader\cf1\highlight2 
+\par \cf3\highlight0 I (30) boot: compile time 11:51:50\cf1\highlight2 
+\par \cf3\highlight0 I (31) boot: chip revision: 1\cf1\highlight2 
+\par \cf3\highlight0 I (35) boot_comm: chip revision: 1, min. bootloader chip revision: 0\cf1\highlight2 
+\par \cf3\highlight0 I (42) boot.esp32: SPI Speed      : 40MHz\cf1\highlight2 
+\par \cf3\highlight0 I (46) boot.esp32: SPI Mode       : DIO\cf1\highlight2 
+\par \cf3\highlight0 I (51) boot.esp32: SPI Flash Size : 4MB\cf1\highlight2 
+\par \cf3\highlight0 I (55) boot: Enabling RNG early entropy source...\cf1\highlight2 
+\par \cf3\highlight0 I (61) boot: Partition Table:\cf1\highlight2 
+\par \cf3\highlight0 I (64) boot: ## Label            Usage          Type ST Offset   Length\cf1\highlight2 
+\par \cf3\highlight0 I (72) boot:  0 nvs              WiFi data        01 02 00009000 00005000\cf1\highlight2 
+\par \cf3\highlight0 I (79) boot:  1 otadata          OTA data         01 00 0000e000 00002000\cf1\highlight2 
+\par \cf3\highlight0 I (87) boot:  2 app0             OTA app          00 10 00010000 001e0000\cf1\highlight2 
+\par \cf3\highlight0 I (94) boot:  3 app1             OTA app          00 11 001f0000 001e0000\cf1\highlight2 
+\par \cf3\highlight0 I (102) boot:  4 storage          Unknown data     01 82 003d0000 00030000\cf1\highlight2 
+\par \cf3\highlight0 I (109) boot: End of partition table\cf1\highlight2 
+\par \cf3\highlight0 I (113) boot_comm: chip revision: 1, min. application chip revision: 0\cf1\highlight2 
+\par \cf3\highlight0 I (121) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x358e0 (2map\cf1\highlight2 
+\par \cf3\highlight0 I (213) esp_image: segment 1: paddr=0x00045908 vaddr=0x3ffbdb60 size=0x03fc0 ( load\cf1\highlight2 
+\par \cf3\highlight0 I (220) esp_image: segment 2: paddr=0x000498d0 vaddr=0x40080000 size=0x00404 ( load\cf1\highlight2 
+\par \cf3\highlight0 I (221) esp_image: segment 3: paddr=0x00049cdc vaddr=0x40080404 size=0x0633c ( load\cf1\highlight2 
+\par \cf3\highlight0 I (240) esp_image: segment 4: paddr=0x00050020 vaddr=0x400d0020 size=0xf4488 (1 map\cf1\highlight2 
+\par \cf3\highlight0 I (621) esp_image: segment 5: paddr=0x001444b0 vaddr=0x40086740 size=0x16df8 ( load\cf1\highlight2 
+\par \cf3\highlight0 I (677) boot: Loaded app from partition at offset 0x10000\cf1\highlight2 
+\par \cf3\highlight0 I (678) boot: Disabling RNG early entropy source...\cf1\highlight2 
+\par \cf3\highlight0 I (678) cpu_start: Pro cpu up.\cf1\highlight2 
+\par \cf3\highlight0 I (682) cpu_start: Application information:\cf1\highlight2 
+\par \cf3\highlight0 I (686) cpu_start: Project name:     ProTubeVRFw\cf1\highlight2 
+\par \cf3\highlight0 I (692) cpu_start: App version:      e0d1ad3-dirty\cf1\highlight2 
+\par \cf3\highlight0 I (697) cpu_start: Compile time:     Oct 19 2021 14:25:51\cf1\highlight2 
+\par \cf3\highlight0 I (703) cpu_start: ELF file SHA256:  e7d7e60988d20e54...\cf1\highlight2 
+\par \cf3\highlight0 I (709) cpu_start: ESP-IDF:          v4.2-dev-1995-g636b964c8-dirty\cf1\highlight2 
+\par \cf3\highlight0 I (716) cpu_start: Starting app cpu, entry point is 0x400816a8\cf1\highlight2 
+\par \cf3\highlight0 I (708) cpu_start: App cpu up.\cf1\highlight2 
+\par \cf3\highlight0 I (727) heap_init: Initializing. RAM available for dynamic allocation:\cf1\highlight2 
+\par \cf3\highlight0 I (734) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (740) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (746) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (752) heap_init: At 3FFD24A0 len 0000DB60 (54 KiB): DRAM\cf1\highlight2 
+\par \cf3\highlight0 I (758) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM\cf1\highlight2 
+\par \cf3\highlight0 I (764) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM\cf1\highlight2 
+\par \cf3\highlight0 I (771) heap_init: At 4009D538 len 00002AC8 (10 KiB): IRAM\cf1\highlight2 
+\par \cf3\highlight0 I (777) cpu_start: Pro cpu start user code\cf1\highlight2 
+\par \cf3\highlight0 I (799) spi_flash: detected chip: gd\cf1\highlight2 
+\par \cf3\highlight0 I (799) spi_flash: flash io: dio\cf1\highlight2 
+\par \cf3\highlight0 I (800) cpu_start: Starting scheduler on PRO CPU.\cf1\highlight2 
+\par \cf3\highlight0 I (0) cpu_start: Starting scheduler on APP CPU.\cf1\highlight2 
+\par \cf3\highlight0 I (828) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (828) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (838) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| PulldoIntr:0\cf1\highlight2 
+\par \cf3\highlight0 I (848) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| PulldoIntr:0\cf1\highlight2 
+\par \cf3\highlight0 I (858) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| PulldoIntr:0\cf1\highlight2 
+\par \cf3\highlight0 I (868) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (878) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (888) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulld Intr:0\cf1\highlight2 
+\par \cf3\highlight0 I (908) MAIN: Device Name ForceTubeVR 750890267\cf1\highlight2 
+\par \cf3\highlight0 I (918) BTDM_INIT: BT controller compile version [c293075]\cf1\highlight2 
+\par \cf3\highlight0 I (918) system_api: Base MAC address is not set\cf1\highlight2 
+\par \cf3\highlight0 I (918) system_api: read default base MAC address from EFUSE\cf1\highlight2 
+\par \cf3\highlight0 I (1018) phy: phy_version: 4182, f1ba940, Jun  4 2020, 19:40:07, 0, 0\cf1\highlight2 
+\par \cf3\highlight0 I (1578) IBluetooth: ESP_SPP_INIT_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (1598) IBluetooth: event: 10\cf1\highlight2 
+\par \cf3\highlight0 I (1598) IBluetooth: ESP_SPP_START_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (1838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (1838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (1848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (4838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (4838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (4848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (7838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (7838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (7848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (10838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (10838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (10848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (13838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (13838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (13848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (16838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (16838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (16848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (19838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (19838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (19848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (22838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (22838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (22848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (25838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (25838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (25848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (28838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (28838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (28848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (31838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (31838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (31848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (34838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (34838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (34848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (37838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (37838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (37848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (40838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (40838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (40848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (43838) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (43838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (43848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (46838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (46838) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (46848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (48968) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (48968) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (48978) IBluetooth: ESP_SPP_OPEN_EVT 129\cf1\highlight2 
+\par \cf3\highlight0 I (48978) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (48978) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (48988) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (49838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (49838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (49848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (49978) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (52838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (52838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (52848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (55838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (55838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (55848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (58838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (58838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (58848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (61838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (61838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (61848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (64838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (64838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (64848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (67838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (67838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (67848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (70838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (70838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (70848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (73838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (73838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (73848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (76838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (76838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (76848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (79838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (79838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (79848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (82838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (82838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (82848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (85838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (85838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (85848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (88838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (88838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (88848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (91838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (91838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (91848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (94838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (94838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (94848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (97838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (97838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (97848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (100838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (100838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (100848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (103838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (103838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (103848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (106838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (106838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (106848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (109838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (109838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (109848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (112838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (112838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (112848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (115838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (115838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (115848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (118838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (118838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (118848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (121838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (121838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (121848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (124838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (124838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (124848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (127838) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (127838) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (127848) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (130228) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Closed (res: 19)\cf1\highlight2 
+\par \cf3\highlight0 I (130228) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (130228) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (130318) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (130318) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41\cf1\highlight2 
+\par \cf3\highlight0 I (131238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (131238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (131248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (134238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (134238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (134248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (137238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (137238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (137248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (140238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (140238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (140248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (143238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (143238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (143248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (146238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (146238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (146248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (149238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (149238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (149248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (152238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (152238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (152248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (155238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (155238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (155248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (158238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (158238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (158248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (161238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (161238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (161248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (164238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (164238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (164248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (167238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (167238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (167248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (170238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (170238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (170248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (173238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (173238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (173248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (176238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (176238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (176248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (179238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (179238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (179248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (182238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (182238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (182248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (185238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (185238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (185248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (188238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (188238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (188248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (191238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (191238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (191248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (194238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (194238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (194248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (194858) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (194858) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (194858) IBluetooth: ESP_SPP_OPEN_EVT 385\cf1\highlight2 
+\par \cf3\highlight0 I (194858) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (194868) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (194868) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (195868) PTVR_Bluetooth: BTPacket code 1\cf1\highlight2 
+\par \cf3\highlight0 I (197238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (197238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (197248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (200238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (200238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (200248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (203238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (203238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (203248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (206238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (206238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (206248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (209238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (209238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (209248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (212238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (212238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (212248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (215238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (215238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (215248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (218238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (218238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (218248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (221238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (221238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (221248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (224238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (224238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (224248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (227238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (227238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (227248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (230238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (230238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (230248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (233238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (233238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (233248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (236238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (236238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (236248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (239238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (239238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (239248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (242238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (242238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (242248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (245238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (245238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (245248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (246248) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Closed (res: 19)\cf1\highlight2 
+\par \cf3\highlight0 I (246248) IBluetooth: ESP_SPP_CLOSE_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (246248) PTVR_Bluetooth: OnDisconnected\cf1\highlight2 
+\par \cf5\highlight0 W (246278) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x44 current:0x0\cf1\highlight2 
+\par \cf5\highlight0 W (246288) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x44\cf1\highlight2 
+\par \cf3\highlight0 I (248238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (248238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (248248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (251238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (251238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (251248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (254238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (254238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (254248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (257238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (257238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (257248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (260238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (260238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (260248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (263238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (263238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (263248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (266238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (266238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (266248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (269238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (269238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (269248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (272238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (272238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (272248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (275238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (275238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (275248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (278238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (278238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (278248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (281238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (281238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (281248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (284238) PTVR_Bluetooth: SendBatteryValue 82\cf1\highlight2 
+\par \cf4\highlight0 E (284238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (284248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (287238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (287238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (287248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (290238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf4\highlight0 E (290238) IBluetooth: No Handdle ! SendData 0 1 0x3ffbb4d0 ESP_FAIL\cf1\highlight2 
+\par \cf5\highlight0 W (290248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf5\highlight0 W (291328) BT_APPL: new conn_srvc id:26, app_id:255\cf1\highlight2 
+\par \cf3\highlight0 I (291328) IBluetooth: ESP_SPP_SRV_OPEN_EVT\cf1\highlight2 
+\par \cf3\highlight0 I (291328) IBluetooth: ESP_SPP_OPEN_EVT 129\cf1\highlight2 
+\par \cf3\highlight0 I (291338) PTVR_Bluetooth: OnConnected\cf1\highlight2 
+\par \cf3\highlight0 I (291338) PTVR_Bluetooth: OnSrvConnected\cf1\highlight2 
+\par \cf3\highlight0 I (293238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (293238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (293248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (296238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (296238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (296248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (299238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (299238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (299248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \cf3\highlight0 I (302238) PTVR_Bluetooth: SendBatteryValue 81\cf1\highlight2 
+\par \cf3\highlight0 I (302238) IBluetooth: ESP_SPP_WRITE_EVT\cf1\highlight2 
+\par \cf5\highlight0 W (302248) PowerManagement: Version Number : 62\cf1\highlight2 
+\par \pard\cf0\highlight0\f1 
+\par }
+ 
