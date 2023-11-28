@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes: []
   m_configObjects:
-    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 9373e35fb946418419768bda3bfc04c6, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: e064a5c60b1db4d4e8cb338962c37b0b, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8e94846968b009b45a0e70b823c3126d, type: 2}
